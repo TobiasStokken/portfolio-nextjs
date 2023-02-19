@@ -34,12 +34,12 @@ const androidApp = () => {
             labore ut possimus quaerat delectus, neque at, omnis cupiditate,
             veniam maiores. Alias, et.
           </p>
-          <a href="/">
+          <Link href="/">
             <button className="px-8 py-2 mt-4 mr-8">Kode</button>
-          </a>
-          <a href="/">
+          </Link>
+          <Link href="/">
             <button className="px-8 py-2 mt-4 mr-8">Demo</button>
-          </a>
+          </Link>
         </div>
         <div className="col-span-4 md:col-span-1 shadow-xl shadow-gray-400 rounded-xl p-4">
           <div className="p-2">
@@ -61,7 +61,7 @@ const androidApp = () => {
           </div>
         </div>
         <Link href="/#projects">
-        <p className="underline cursor-pointer">Tilbake</p>
+          <p className="underline cursor-pointer">Tilbake</p>
         </Link>
       </div>
     </div>
