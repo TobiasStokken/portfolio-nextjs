@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import androidAppImg from "../public/assets/projects/dart.png";
+import hkraftImg from "../public/assets/projects/hkraft.png";
 import ProjectItem from "./projectItem";
 
 const Projects = () => {
@@ -20,10 +21,10 @@ const Projects = () => {
             tech="Dart/Flutter for Android"
           />
           <ProjectItem
-            title="Random Ord Generator"
-            backgroundImg={androidAppImg}
-            projectUrl="/androidApp"
-            tech="Dart/Flutter for Android"
+            title="Haugaland kraft bestlling side"
+            backgroundImg={hkraftImg}
+            projectUrl="/hkraft"
+            tech="Vue/go"
           />
           <ProjectItem
             title="Random Ord Generator"
