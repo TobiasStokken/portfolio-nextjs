@@ -15,10 +15,10 @@ const Projects = () => {
         <h2 className="py-4">Hva Jeg Har Jobbet Med</h2>
         <div className="grid md:grid-cols-2 gap-8">
           <ProjectItem
-            title="Random Ord Generator"
-            backgroundImg={androidAppImg}
-            projectUrl="/androidApp"
-            tech="Dart/Flutter for Android"
+            title="Nextjs portfolio"
+            backgroundImg={nextjsImg}
+            projectUrl="/nextjs"
+            tech="Nextjs med react og tailwind"
           />
           <ProjectItem
             title="Haugaland kraft bestlling side"

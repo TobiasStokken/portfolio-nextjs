@@ -2,33 +2,32 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import { AiOutlineClose, AiOutlineMail, AiOutlineMenu } from "react-icons/ai";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { BsFillPersonLinesFill } from "react-icons/bs";
 import { useRouter } from "next/router";
-import navLogo from "../public/assets/navLogo.png"
+import navLogo from "../public/assets/navLogo.png";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
   const [shadow, setShadow] = useState(false);
-  const  [navBg, setNavBg] = useState("#ecf0f3")
-  const [linkColor, setLinkColor] = useState("#1f2937")
-  const router = useRouter()
+  const [navBg, setNavBg] = useState("#ecf0f3");
+  const [linkColor, setLinkColor] = useState("#1f2937");
+  const router = useRouter();
 
   useEffect(() => {
     if (
       router.asPath === "/androidApp" ||
-      router.asPath === "/androidApp" ||
+      router.asPath === "/nextjs" ||
       router.asPath === "/androidApp" ||
       router.asPath === "/androidApp"
     ) {
-      setNavBg("transparent")
-      setLinkColor("#ecf0f3")
+      setNavBg("transparent");
+      setLinkColor("#ecf0f3");
     } else {
-      setNavBg("#ecf0f3")
-      setLinkColor("#1f2937")
-
+      setNavBg("#ecf0f3");
+      setLinkColor("#1f2937");
     }
-  },[router])
+  }, [router]);
 
   const handleNav = () => {
     setNav(!nav);
@@ -47,7 +46,7 @@ const Navbar = () => {
 
   return (
     <div
-    style={{backgroundColor: `${navBg}`}}
+      style={{ backgroundColor: `${navBg}` }}
       className={
         shadow
           ? "fixed w-full h-20 shadow-xl z-[100]"
@@ -56,15 +55,10 @@ const Navbar = () => {
     >
       <div className="flex justify-between items-center w-full h-full px-2 2xl:px-16">
         <Link href="/#home">
-          <Image
-            src={navLogo}
-            alt="/"
-            width="50"
-            height="50"
-          />
+          <Image src={navLogo} alt="/" width="50" height="50" />
         </Link>
         <div>
-          <ul style={{color: `${linkColor}`}} className="hidden md:flex">
+          <ul style={{ color: `${linkColor}` }} className="hidden md:flex">
             <Link href="/#home">
               <li className="ml-10 text-sm uppercase hover:border-b">Hjem</li>
             </Link>
@@ -107,12 +101,7 @@ const Navbar = () => {
           <div>
             <div className="flex w-full items-center justify-between">
               <Link onClick={handleNav} href="/#home">
-                <Image
-                  src={navLogo}
-                  alt="/"
-                  width="100"
-                  height="50"
-                />
+                <Image src={navLogo} alt="/" width="100" height="50" />
               </Link>
               <div
                 onClick={handleNav}
@@ -151,18 +140,28 @@ const Navbar = () => {
                 Ta kontakt
               </p>
               <div className="flex items-center justify-between my-4 w-full sm:w-[80%]">
-                <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
-                  <FaLinkedin />
-                </div>
-                <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
-                  <FaGithub />
-                </div>
-                <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
-                  <AiOutlineMail />
-                </div>
-                <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
-                  <BsFillPersonLinesFill />
-                </div>
+                <Link
+                  href={"https://www.linkedin.com/in/tobias-stokken-54b83a235/"}
+                >
+                  <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
+                    <FaLinkedin />
+                  </div>
+                </Link>
+                <Link href={"https://github.com/TobiasStokken"}>
+                  <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
+                    <FaGithub />
+                  </div>
+                </Link>
+                <Link href={"https://www.instagram.com/chips_godt/"}>
+                  <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
+                    <FaInstagram />
+                  </div>
+                </Link>
+                <Link href={"mailto:tobias@stokken.net"}>
+                  <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
+                    <AiOutlineMail />
+                  </div>
+                </Link>
               </div>
             </div>
           </div>

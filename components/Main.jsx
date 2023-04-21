@@ -1,7 +1,8 @@
+import Link from "next/link";
 import React from "react";
 import { AiOutlineMail } from "react-icons/ai";
 import { BsFillPersonLinesFill } from "react-icons/bs";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 const Main = () => {
   return (
@@ -20,18 +21,26 @@ const Main = () => {
             å lærer nye ting fort.
           </p>
           <div className="flex items-center justify-between max-w-[330px] m-auto py-4">
+            <Link href={"https://www.linkedin.com/in/tobias-stokken-54b83a235/"}>
             <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-105 ease-in duration-300">
                 <FaLinkedin />
             </div>
+            </Link>
+            <Link href={"https://github.com/TobiasStokken"}>
             <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-105 ease-in duration-300">
                 <FaGithub />
             </div>
+            </Link>
+            <Link href={"https://www.instagram.com/chips_godt/"}>
+            <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-105 ease-in duration-300">
+                <FaInstagram />
+            </div>
+            </Link>
+            <Link href={"mailto:tobias@stokken.net"}>
             <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-105 ease-in duration-300">
                 <AiOutlineMail />
             </div>
-            <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-105 ease-in duration-300">
-                <BsFillPersonLinesFill />
-            </div>
+            </Link>
           </div>
         </div>
       </div>
