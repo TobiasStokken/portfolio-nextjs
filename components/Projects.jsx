@@ -3,6 +3,7 @@ import Link from "next/link";
 import React from "react";
 import androidAppImg from "../public/assets/projects/dart.png";
 import hkraftImg from "../public/assets/projects/hkraft.png";
+import nextjsImg from "../public/assets/projects/nextjs.png";
 import ProjectItem from "./projectItem";
 
 const Projects = () => {
